@@ -1,24 +1,21 @@
 import java.util.Scanner;
-
-public class Palindrome {
+public class Palindrome{
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int num = input.nextInt();
-        checkPalindrome(num);
-
-    }
-    public static void checkPalindrome(int num) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
         int temp = num;
-        int rev  = 0;
-        while (temp != 0) {
-            rev = rev * 10 + temp % 10;
-            temp = temp / 10;
+        int rev = 0;
+        while(num>0){
+            int digit = num % 10;
+            rev = rev*10 + digit;
+            num = num/10;
         }
-        if (rev == num) {
-            System.out.println("Palindrome");
+        if(rev==temp){
+            System.out.println("Given num is palindrome");
         }
-        else {
-            System.out.println("Not Palindrome");
+        else{
+            System.out.println("Given num is not a palindrome");
         }
+        sc.close();
     }
-}
+} 
