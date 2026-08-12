@@ -1,14 +1,8 @@
 public class StringManipulation {
-
     public static void main(String[] args) {
 
-        String firstName = "Nakul";
-        String lastName = "Singh";
-        String fullName = firstName + " " + lastName;
-        // String fullname = firstName.concat(" ").concat(lastName);
-        System.out.println(fullName);
-        System.out.println(fullName.toUpperCase());
+        String str = "hello";
 
+        System.out.printf("First Char: %c%nSecond Char: %c",str.charAt(0),str.charAt(str.length() - 1));
     }
-    
 }
